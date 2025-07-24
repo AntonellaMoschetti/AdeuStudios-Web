@@ -1,0 +1,465 @@
+
+@font-face {
+    font-family: poppins;
+    src: url(../assets/poppins/Poppins-Regular.ttf);
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: poppins;
+    src: url(../assets/poppins/Poppins-Bold.ttf);
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: poppins;
+    src: url(../assets/poppins/Poppins-ExtraBold.ttf);
+    font-weight: 800;
+}
+
+
+.logo {
+    height: 15vh;
+    width: auto;
+}
+
+
+body{
+    background-color: #ededed;
+    font-family: poppins;
+    font-weight: 400;
+    margin: 0;
+}
+
+a{
+    text-decoration: none;
+}
+
+header{
+    background: linear-gradient(to bottom, #939393, #ededed);
+    margin: 0;
+    padding: 0;
+    min-height: 35vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto;
+    row-gap: 1rem;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+
+.logo{
+    grid-column: 1/2;
+    grid-row: 1;
+    justify-self: start;
+}
+
+
+.AdeuStudios{
+    grid-column: 2/3;
+    grid-row: 1;
+    display: flex;
+    align-items: center;
+    justify-self: center;
+    margin: 0;
+    color: black;
+    font-weight: 700;
+    font-size: 4rem;
+}
+
+.nav-menu{
+    grid-column: 1/4;
+    grid-row: 2;
+    width: 100%;
+}
+
+.nav-menu .menu{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    gap: 7rem;
+}
+
+.menu a{
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border-radius: 0.6rem;
+    transition: background-color 0.3s ease;
+    font-family: poppins;
+    font-weight: 400;
+    text-decoration: none;
+    color: black;
+    font-size: 1.2rem;
+}
+
+.menu a:hover{
+    background-color: #fab416;
+    color: black;
+    font-weight: 700;
+}
+
+.menu a.active{
+    background-color: #fab416;
+    font-weight: 700;
+    color: black;
+}
+
+.banner-section{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0;
+}
+
+.banner-img{
+    width: 100%;
+    max-width: 1280px;
+    height: auto;
+    display: block;
+}
+
+.servicios-section{
+    margin-top: 5rem;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
+}
+
+.servicios-title{
+    font-size: 1.25rem;
+    padding: 0 2rem;
+    grid-column: 1/2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100%;
+}
+
+.servicios-card{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.4rem;
+    padding-right: 2rem;
+}
+
+
+.servicio{
+    background-color: rgba(185, 185, 185, 0.5);
+    padding: 1rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 0.625rem rgba(147, 147, 147, 0.3);
+    border: 0.0625rem solid #ddd;
+}
+
+.servicio:hover {
+    background-color: #fab416;
+}
+
+.nuestro-trabajo{
+    padding: 2rem 2rem;
+    text-align: center;
+}
+
+.nuestro-trabajo-title{
+    font-size: 1.25rem;
+}
+
+.nuestro-trabajo-card{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(15.625rem, 1fr));
+    gap: 5rem;
+    justify-items: center;
+    padding: 5rem;
+}
+
+.trabajo-card{
+    background-color: rgba(185, 185, 185, 0.5);
+    padding: 1rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 0.625rem rgba(147, 147, 147, 0.3);
+    border: 0.0625rem solid #ddd;
+    width: 100%;
+    max-width: 18.75rem;
+    text-align: left;
+}
+
+.trabajo-card:hover {
+    background-color: #fab416;
+}
+
+.nuestra-identidad-title{
+    padding: 2rem 2rem;
+    text-align: center;
+    font-size: 1.25rem;
+}
+
+.nuestra-identidad-body{
+    padding: 0 4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.nuestra-identidad-body h3 {
+    font-size: 1.15rem; 
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.nuestra-identidad-body p {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #4f4f4f;
+}
+
+.nuestra-identidad-body div {
+    border-left: 4px solid #fab416;
+    padding-left: 1rem;
+}
+
+.contacto-main{
+    margin-top: 4rem;
+}
+
+.contacto-form {
+    max-width: 50rem;
+    margin: 1rem auto 0 auto;
+    padding: 1.5rem 3rem 3rem 3rem;
+    background-color: #f9f9f9;
+    border-radius: 1rem;
+    box-shadow:  0 0 0.625rem rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.contacto-title {
+    text-align: center;
+    margin: 0;
+    font-size: 1.25rem;
+}
+
+.form-field{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form-field label {
+    font-weight: 600;
+    color: #4f4f4f;
+}
+
+.form-input,
+textarea,
+select {
+    width: 100%;
+    padding: 0.75rem;
+    border: 3px solid #ccc;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    font-family: poppins;
+    box-sizing: border-box;
+}
+
+.form-input:focus,
+textarea:focus,
+select:focus {
+    border-color: #fab416;
+    outline: none;
+    background-color: #edededc4;
+}
+
+.submit-button{
+    padding: 0.75rem 0.7rem;
+    font-size: 1rem;
+    background-color: #fab416;
+    color: black;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+    width: auto;
+    align-self: flex-end;
+}
+
+.nuestra-ubicacion{
+    padding: 2rem;
+}
+
+.nuestra-ubicacion-title{
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+.nuestra-ubicacion iframe {
+    display: block;
+    margin-left: 0;        
+    margin-right: auto;
+    border-radius: 1rem;   
+    box-shadow: 0 0 0.625rem rgba(0, 0, 0, 0.1); 
+    width: 100%;      
+    height: 15rem;
+}
+
+
+
+.submit-button:hover{
+    background-color: #e2a910 ;
+}
+
+footer{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: auto auto;
+    align-items: center;
+    padding: 2rem;
+    gap: 0.5rem;
+}
+
+.slogan{
+    grid-column: 1/4;
+    grid-row: 1;
+    text-align: center;
+    margin: 0;
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+.derechos{
+    grid-column: 2/3;
+    grid-row: 2;
+    margin: 0;
+    text-align: center;
+    font-weight: 700;
+    color: #949494;
+}
+
+.redes{
+    grid-column: 3/4;
+    grid-row: 2;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 1rem;
+}
+
+.logo-instagram{
+    height: 9vh;
+    width: auto;
+}
+
+.logo-wpp{
+    height: 15vh;
+    width: auto;
+}
+
+@media (max-width: 430px){
+
+    header{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem;
+        gap: 0.8rem;
+        width: 100%;
+        box-sizing: border-box;
+        background: linear-gradient(to bottom, #939393, #ededed);
+        }
+
+    .logo{
+        height: 10vh;
+        max-width: 100%;
+        width: auto;
+        margin-top: 1rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .AdeuStudios{
+        font-size: 2rem;
+        text-align: center;
+        margin: 0;
+    }
+
+    .nav-menu{
+        width: 100%;
+    }
+    .nav-menu .menu{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.7rem;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+
+    .menu a{
+        display: block;
+        width: 100%;
+        padding: 0.6rem;
+        text-align: center;
+        font-size: 1rem;
+        border-radius: 0.5rem;
+        color: black;
+    }
+
+    .servicios-section{
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        padding: 0 1rem;
+        margin-top: 2rem;
+        box-sizing: border-box;
+        width: 100%;
+    }
+
+    .servicios-title{
+        padding: 0;
+        font-size: 1.2rem;
+    }
+
+    .servicios-card{
+        display: flex;
+        flex-direction: column;
+        gap: 1.2rem;
+        padding: 0;
+        box-sizing: border-box;
+        width: 100%;
+    }
+
+    .servicio{
+        width: 100%;
+        box-sizing: border-box;
+        overflow-wrap: break-word;
+        word-break: normal;
+    }
+
+    .nuestro-trabajo{
+        width: 100%;
+        box-sizing: border-box;
+        padding: 0 1.2rem;
+    }
+
+    .nuestro-trabajo-card{
+        display: flex;
+        flex-direction: column;
+        gap: 1.2rem;
+        box-sizing: border-box;
+        width: 100%;
+        overflow-wrap: break-word;
+        word-break: normal;
+    }
+
+}

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AdeuStudios - Servicios</title>
     <link rel="shortcut icon" href="../assets/Logo adeu transparente.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
     <link rel="stylesheet" href="../styles/styles.css">
 </head>
 
@@ -18,22 +19,33 @@
                 <h1 class="AdeuStudios">AdeuStudios</h1>
             </a>
 
-        <nav class="nav-menu"> 
-            <ul class="menu">
-                <li>
-                    <a href="../pages/servicios.html" class="active">Servicios</a>
-                </li>
-                <li>
-                    <a href="../pages/nuestro-trabajo.html">Nuestro trabajo</a>
-                </li>
-                <li>
-                    <a href="../pages/nuestra-identidad.html">Nuestra identidad</a>
-                </li>
-                <li>
-                    <a href="../pages/contacto.html">Contacto</a>
-                </li>
-            </ul>
+        <nav class="nav-menu navbar navbar-expand-lg"> 
+            <div class="container-fluid">
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu" aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                    <div class="current-page-title d-lg-none">
+                        Servicios
+                    </div>
+
+                <div class="collapse navbar-collapse" id="navbarMenu">
+
+                    <ul class="menu navbar-nav">
+                        <li class="nav-item"><a class="nav-link active" href="../pages/servicios.html">Servicios</a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="../pages/nuestro-trabajo.html">Nuestro trabajo</a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="../pages/nuestra-identidad.html">Nuestra identidad</a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="../pages/contacto.html">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </nav>
+
     </header>
 
     <section class="servicios-section">
@@ -45,12 +57,11 @@
         <div class="servicios-card">
             <div class="servicio">
                 <h3>Gestión de redes sociales</h3>
-                <p>Creación de contenido, programación, interacción y análisis</p>
+                <p>Conecta y crece con tu audiencias</p>
                     <ul>
-                        <li>lorem ipsum</li>
-                        <li>lorem ipsum</li>
-                        <li>lorem ipsum</li>
-                        <li>lorem ipsum</li>
+                        <li>Calendarios de contenido</li>
+                        <li>Diseño de posts y stories</li>
+                        <li>Análisis y reportes de resultados</li>
                     </ul>
             </div>
 
@@ -58,12 +69,42 @@
                 <h3>Branding y diseño de marca</h3>
                 <p>Diseñá tu identidad</p>
                     <ul>
-                        <li>lorem ipsum</li>
-                        <li>lorem ipsum</li>
+                        <li>Diseño de logos memorables</li>
+                        <li>Manual de identidad visual</li>
                         <li>lorem ipsum</li>
                         <li>lorem ipsum</li>
                     </ul>
             </div>
+
+            <div class="servicio"> 
+                <h3>Diseño web y desarrollo</h3>
+                <p>Una web hecha a medida para tu marca digital</p>
+                    <ul>
+                        <li>Diseño y desarrollo de sitios web responsivos</li>
+                        <li>Landing pages para campañas específicas</li>
+                        <li>Mantenimiento y actualización de sitios</li>
+                    </ul>
+            </div>        
+        
+            <div class="servicio"> 
+                <h3>Diseño UX/UI</h3>
+                <p>Experiencias digitales que cautivan</p>
+                    <ul>
+                        <li>Interfaces intuitivas</li>
+                        <li>Prototipos interactivos</li>
+                        <li>Optimización para usuarios</li>
+                    </ul>
+            </div>   
+
+            <div class="servicio"> 
+                <h3>Ftografía y Contenido Audiovisual</h3>
+                <p>Contenido visual hecho a tu medida
+                    <ul>
+                        <li>Sesiones de producto y lifestyle</li>
+                        <li>Fotos para redes y web</li>
+                        <li>Videos corporativos y promocionales</li>
+                    </ul>
+            </div> 
         </div>
 
     </section>
@@ -84,6 +125,7 @@
         </section>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
 </body>
 
 </html>

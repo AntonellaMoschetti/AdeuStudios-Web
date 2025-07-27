@@ -36,6 +36,8 @@ a{
     text-decoration: none;
 }
 
+/* HEADER */
+
 header{
     background: linear-gradient(to bottom, #939393, #ededed);
     margin: 0;
@@ -80,8 +82,28 @@ header{
     justify-content: center;
     align-items: center;
     padding: 0;
-    margin: 0;
+    margin: 0 auto;
     gap: 7rem;
+    width: fit-content;
+}
+
+.nav-menu .nav-link{
+    padding: 0;
+    color: black;
+}
+
+.navbar-toggler{
+    border: none;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0,0,0,0.8)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+.nav-menu .navbar-nav.ms-auto {
+    margin-left: 0;
+    margin-right: 0;
+    justify-content: center;
 }
 
 .menu a{
@@ -123,28 +145,33 @@ header{
     display: block;
 }
 
+/* SERVICIOS */
+
 .servicios-section{
     margin-top: 5rem;
     display: grid;
     grid-template-columns: 1fr 2fr;
     gap: 2rem;
+    padding-right: 5rem;
 }
 
 .servicios-title{
+    position: sticky;
+    top: 2rem;
+    background-color: #ededed;
     font-size: 1.25rem;
-    padding: 0 2rem;
+    padding: 1rem 2rem;
     grid-column: 1/2;
+    align-items: flex-start;
     display: flex;
-    align-items: center;
-    justify-content: center;
     text-align: center;
-    height: 100%;
+    height: fit-content;
 }
 
 .servicios-card{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 1.4rem;
+    gap: 3rem;
     padding-right: 2rem;
 }
 
@@ -160,6 +187,8 @@ header{
 .servicio:hover {
     background-color: #fab416;
 }
+
+/* NUESTRO TRABAJO */
 
 .nuestro-trabajo{
     padding: 2rem 2rem;
@@ -185,13 +214,15 @@ header{
     box-shadow: 0 0 0.625rem rgba(147, 147, 147, 0.3);
     border: 0.0625rem solid #ddd;
     width: 100%;
-    max-width: 18.75rem;
+    /* max-width: 18.75rem; */
     text-align: left;
 }
 
 .trabajo-card:hover {
     background-color: #fab416;
 }
+
+/* NUESTRA IDENTIDAD */
 
 .nuestra-identidad-title{
     padding: 2rem 2rem;
@@ -224,6 +255,8 @@ header{
     border-left: 4px solid #fab416;
     padding-left: 1rem;
 }
+
+/* CONTACTO */
 
 .contacto-main{
     margin-top: 4rem;
@@ -312,11 +345,11 @@ select:focus {
     height: 15rem;
 }
 
-
-
 .submit-button:hover{
     background-color: #e2a910 ;
 }
+
+/* FOOTER */
 
 footer{
     display: grid;
@@ -332,8 +365,9 @@ footer{
     grid-row: 1;
     text-align: center;
     margin: 0;
+    margin-top: 2rem;
     font-weight: 700;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
 }
 
 .derechos{
@@ -343,6 +377,7 @@ footer{
     text-align: center;
     font-weight: 700;
     color: #949494;
+    font-size: 1rem;
 }
 
 .redes{
@@ -364,7 +399,32 @@ footer{
     width: auto;
 }
 
-@media (max-width: 430px){
+/* MEDIA */
+
+@media (max-width: 992px) {
+    .nav-menu .menu {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .navbar-toggler{
+        margin-top: 1rem;
+        margin-bottom: 3rem;
+    }
+    
+    .current-page-title {
+    background-color: #fab416;
+    font-weight: 700;
+    color: black;
+    width:fit-content;
+    text-align: center;
+    font-size: 1.2rem;
+    margin-top: 0.5;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0.3rem 0.5rem;
+    border-radius: 0.3rem;
+    }
 
     header{
         display: flex;
@@ -387,14 +447,18 @@ footer{
     }
 
     .AdeuStudios{
-        font-size: 2rem;
+        font-size: clamp(2rem, 5vw, 4rem);
         text-align: center;
         margin: 0;
     }
 
     .nav-menu{
         width: 100%;
+        padding: 0;    
+        background: none; 
+        border: none;
     }
+
     .nav-menu .menu{
         display: flex;
         flex-direction: column;
@@ -403,6 +467,7 @@ footer{
         margin: 0;
         padding: 0;
         width: 100%;
+        list-style: none;
     }
 
     .menu a{
@@ -415,22 +480,27 @@ footer{
         color: black;
     }
 
-    .servicios-section{
+    .servicios-section,
+    .nuestro-trabajo {
         display: flex;
         flex-direction: column;
         gap: 2rem;
         padding: 0 1rem;
         margin-top: 2rem;
+        margin-left: 2rem;
+        margin-right: 2rem;
         box-sizing: border-box;
-        width: 100%;
+        width: auto;
     }
 
     .servicios-title{
         padding: 0;
         font-size: 1.2rem;
+        position: static;
     }
 
-    .servicios-card{
+    .servicios-card,
+    .nuestro-trabajo-card{
         display: flex;
         flex-direction: column;
         gap: 1.2rem;
@@ -439,27 +509,15 @@ footer{
         width: 100%;
     }
 
-    .servicio{
+    .servicio,
+    .trabajo-card{
         width: 100%;
         box-sizing: border-box;
         overflow-wrap: break-word;
         word-break: normal;
     }
 
-    .nuestro-trabajo{
-        width: 100%;
-        box-sizing: border-box;
-        padding: 0 1.2rem;
+    .derechos{
+        font-size: 1rem;
     }
-
-    .nuestro-trabajo-card{
-        display: flex;
-        flex-direction: column;
-        gap: 1.2rem;
-        box-sizing: border-box;
-        width: 100%;
-        overflow-wrap: break-word;
-        word-break: normal;
-    }
-
 }

@@ -1,0 +1,195 @@
+@use "variables" as v;
+@use "mixins" as m;
+
+header{
+    background: linear-gradient(to bottom, v.$color-gris, v.$color-background);
+    margin: 0;
+    padding: 0;
+    min-height: 35vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto;
+    row-gap: 1rem;
+    align-items: center;
+    padding: 1rem 2rem;
+
+    .logo{
+        grid-column: 1/2;
+        grid-row: 1;
+        justify-self: start;
+        max-height: 15vh;
+        width: auto;
+    }
+
+    .AdeuStudios{
+        grid-column: 2/3;
+        grid-row: 1;
+        display: flex;
+        align-items: center;
+        justify-self: center;
+        margin: 0;
+        color: v.$color-texto;
+        font-weight: 700;
+        font-size: 4rem;
+    }
+
+    .nav-menu{
+        grid-column: 1/4;
+        grid-row: 2;
+        width: 100%;
+
+        .menu{
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0;
+            margin: 0 auto;
+            gap: 7rem;
+            width: fit-content;
+
+            a{
+                display: inline-block;
+                padding: 0.5rem 1rem;
+                border-radius: 0.6rem;
+                transition: background-color 0.3s ease;
+                font-family: v.$fuente-principal;
+                font-weight: 400;
+                text-decoration: none;
+                color: v.$color-texto;
+                font-size: 1.2rem;
+
+                &:hover{
+                    background-color: v.$color-detalle;
+                    color: v.$color-texto;
+                    font-weight: 700;
+                }
+
+                &.active{
+                    background-color: v.$color-detalle;
+                    color: v.$color-texto;
+                    font-weight: 700;
+                }
+                
+            }
+        }
+
+        .navbar-nav.ms-auto{
+            margin-left: 0;
+            margin-right: 0;
+            justify-content: center;
+        }
+    }
+
+    .navbar-toggler {
+        border: none;
+
+        .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0,0,0,0.8)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+        }
+    }
+}
+
+.banner-section{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 1rem;  
+    margin-bottom: 0.5rem; 
+
+    .banner-img{
+        width: 100%;
+        max-width: 1280px;
+        height: auto;
+        display: block;
+    }
+}
+
+@include m.mobile {
+.nav-menu {
+        .menu {
+        flex-direction: row;
+        justify-content: center;
+        }
+    }
+
+    .navbar-toggler {
+        margin-top: 1rem;
+        margin-bottom: 3rem;
+    }
+
+    .current-page-title {
+        background-color: v.$color-detalle;
+        font-weight: 700;
+        color: v.$color-background;
+        width: fit-content;
+        text-align: center;
+        font-size: 1.2rem;
+        margin: 0.5rem auto 0 auto;
+        padding: 0.3rem 0.5rem;
+        border-radius: 0.3rem;
+    }
+
+    header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem;
+        margin-bottom: 0;
+        padding-bottom: 0;
+        gap: 0.8rem;
+        width: 100%;
+        box-sizing: border-box;
+        background: linear-gradient(to bottom, v.$color-gris, v.$color-background);
+    }
+
+    .logo {
+        height: 10vh;
+        max-width: 100%;
+        width: auto;
+        margin: 1rem 0 0.5rem 0;
+    }
+
+    .AdeuStudios.AdeuStudios {
+        font-size: 3rem;
+        text-align: center;
+        margin: 0;
+        color: v.$color-texto;
+    }
+
+    .banner-section {
+        margin-top: 0;
+        padding-top: 0;
+    }
+
+    .nav-menu {
+        width: 100%;
+        padding: 0;
+        background: none;
+        border: none;
+
+        .menu {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.7rem;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        list-style: none;
+
+        a {
+            display: block;
+            width: 100%;
+            padding: 0.6rem;
+            text-align: center;
+            font-size: 1rem;
+            border-radius: 0.5rem;
+            color: v.$color-texto;
+        }
+        }
+    }
+}

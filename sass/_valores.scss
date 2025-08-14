@@ -1,0 +1,38 @@
+@use 'variables' as v;
+
+.valores {
+    display: flex;
+    flex-direction: column;       
+    align-items: center;          
+    gap: 2.5rem;
+    padding: 0.5rem 1rem; 
+    margin-top: 1.5rem;  
+
+    .valor {
+        display: flex;
+        align-items: center;
+
+        h3 {
+            font-family: v.$fuente-principal;
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: v.$color-texto;
+            text-transform: uppercase;
+            margin: 0;
+            padding-left: 0.75rem; 
+            text-align: center;     
+            position: relative;
+
+            &::before {
+                content: '';
+                width: 6px;             
+                height: 100%;
+                background-color: v.$color-detalle;
+                position: absolute;
+                left: -1rem;            
+                top: 0;
+                border-radius: 3px;
+            }
+        }
+    }
+}

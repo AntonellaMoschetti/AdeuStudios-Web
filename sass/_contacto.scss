@@ -1,0 +1,94 @@
+@use 'variables' as v;
+
+.contacto-main {
+    margin-top: 4rem;
+
+    .contacto-form {
+        max-width: 50rem;
+        margin: 1rem auto 0 auto;
+        padding: 1.5rem 3rem 3rem 3rem;
+        background-color: v.$color-form-bg;
+        border-radius: 1rem;
+        box-shadow: 0 0 0.625rem v.$color-form-shadow;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+
+        .contacto-title h2 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            font-family: v.$fuente-principal;
+            color: v.$color-texto;
+        }
+
+        .form-field {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+
+            label {
+                font-weight: 600;
+                color: v.$color-texto-secundario;
+            }
+
+            .form-input,
+            textarea.form-input,
+            select.form-input {
+                width: 100%;
+                padding: 0.75rem;
+                border: 3px solid v.$color-gris;
+                border-radius: 0.5rem;
+                font-size: 1rem;
+                font-family: v.$fuente-principal;
+                box-sizing: border-box;
+
+                &:focus {
+                border-color: v.$color-detalle;
+                outline: none;
+                background-color: v.$color-background;
+                }
+            }
+        }
+
+        .submit-button {
+            padding: 0.75rem 0.7rem;
+            font-size: 1rem;
+            background-color: v.$color-detalle;
+            color: v.$color-texto;
+            border: none;
+            border-radius: 0.5rem;
+            cursor: pointer;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+            width: auto;
+            align-self: flex-end;
+
+            &:hover {
+                background-color: rgba(v.$color-detalle, 0.9);
+            }
+        }
+    }
+    }
+
+    .nuestra-ubicacion {
+        padding: 2rem;
+
+        .nuestra-ubicacion-title h2{
+            font-size: 1.25rem;
+            font-weight: 700;
+            text-align: left;
+            margin-left: 1rem;
+            margin-bottom: 1rem;
+            font-family: v.$fuente-principal;
+            color: v.$color-texto;
+        }
+
+    iframe {
+        display: block;
+        width: 100%;
+        height: 15rem;
+        border-radius: 1rem;
+        box-shadow: 0 0 0.625rem v.$color-form-shadow;
+        border: none;
+    }
+}

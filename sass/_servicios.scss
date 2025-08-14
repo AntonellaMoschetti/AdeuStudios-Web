@@ -1,0 +1,83 @@
+@use 'variables' as v;
+@use 'mixins' as m;
+
+.servicios-section {
+    margin-top: 5rem;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
+    padding-right: 5rem;
+
+
+    .servicios-title {
+        h2{
+            position: sticky;
+            top: 2rem;
+            background-color: v.$color-background;
+            color: v.$color-texto;
+            font-size: 2rem;
+            font-weight: 700;
+            padding: 1rem 2rem;
+            display: flex;
+            align-items: flex-start;
+            text-align: center;
+            height: fit-content;
+        }
+
+    }
+
+    .servicios-card {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+        padding: 2rem 2rem 1.5rem 2rem;
+
+        .servicio {
+            @include m.card(v.$color-card-bg, 0 0 0.625rem v.$color-card-shadow);
+            padding: 1.5rem;
+            height: fit-content;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+
+            h3 {
+                font-size: 1.5rem;  
+                font-weight: 700;    
+                color: v.$color-texto;
+                margin-bottom: 1rem;
+                margin-top: 2rem;
+            }
+
+            p {
+                font-size: 1.2rem;   
+                font-weight: 400;
+                color: v.$color-texto-secundario;
+                margin-bottom: 1rem;
+            }
+
+            ul {
+                max-height: 0;
+                overflow: hidden;
+                opacity: 0;
+                margin-top: 0.5rem;
+                padding-left: 1.2rem;
+                text-align: left;
+                align-self: flex-start;
+                transition: max-height 0.5s ease, opacity 0.5s ease;
+            }
+
+            &:hover ul,
+            &.active ul {
+                max-height: 500px;
+                opacity: 1;
+            }
+
+            &:hover {
+                background-color: v.$color-detalle;
+            }
+        }
+    }
+}

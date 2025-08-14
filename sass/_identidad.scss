@@ -1,0 +1,42 @@
+@use 'variables' as v;
+
+.nuestra-identidad-title {
+    padding: 2rem 2rem;
+    text-align: center;
+    font-size: 1.25rem;
+
+    h2 {
+        font-size: 2rem;
+        font-weight: 700;
+        color: v.$color-texto;
+    }
+    }
+
+    .nuestra-identidad-body {
+    padding: 0 4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    width: 100%;
+    box-sizing: border-box;
+
+
+    div {
+        border-left: 4px solid v.$color-detalle;
+        padding-left: 1rem;
+
+
+        h3 {
+        font-size: 1.25rem;
+        font-weight: 700;
+        margin-bottom: 0.5rem;
+        }
+
+
+        p {
+        font-size: 1.1rem;
+        line-height: 1.7;
+        color: v.$color-texto-secundario;
+        }
+    }
+}

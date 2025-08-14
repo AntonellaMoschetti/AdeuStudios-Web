@@ -57,3 +57,32 @@
         }
     }
 }
+
+@include m.mobile {
+    .nuestro-trabajo {
+        display: flex !important;
+        flex-direction: column;
+        gap: 2rem;
+        padding: 0 1rem;
+        margin: 2rem;
+        box-sizing: border-box;
+        width: auto;
+    }
+
+    .nuestro-trabajo-card {
+        display: flex !important;
+        flex-direction: column;
+        gap: 1.2rem;
+        padding: 0;
+        box-sizing: border-box;
+        width: 100%;
+        grid-template-columns: none !important;
+    }
+
+    .trabajo-card {
+        width: 100%;
+        box-sizing: border-box;
+        overflow-wrap: break-word;
+        word-break: normal;
+    }
+}

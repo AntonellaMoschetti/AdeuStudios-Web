@@ -121,6 +121,7 @@ header .navbar-toggler .navbar-toggler-icon {
   .nav-menu .menu {
     flex-direction: row;
     justify-content: center;
+    gap: 0.3rem;
   }
   .navbar-toggler {
     margin-top: 1rem;
@@ -182,10 +183,11 @@ header .navbar-toggler .navbar-toggler-icon {
     width: 100%;
     list-style: none;
   }
-  .nav-menu .menu a {
+  .nav-menu .menu a.nav-link {
     display: block;
     width: 100%;
-    padding: 0.6rem;
+    padding: 0.3rem 0.5rem;
+    margin: 0;
     text-align: center;
     font-size: 1rem;
     border-radius: 0.5rem;
@@ -265,6 +267,37 @@ header .navbar-toggler .navbar-toggler-icon {
   background-color: #fab416;
 }
 
+@media (max-width: 992px) {
+  .servicios-section {
+    display: flex !important;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 0 1rem;
+    margin: 2rem;
+    box-sizing: border-box;
+    width: auto;
+  }
+  .servicios-title {
+    padding: 0;
+    font-size: 1.2rem;
+    position: static;
+  }
+  .servicios-card {
+    display: flex !important;
+    flex-direction: column;
+    gap: 1.2rem;
+    padding: 0;
+    box-sizing: border-box;
+    width: 100%;
+    grid-template-columns: none !important;
+  }
+  .servicio {
+    width: 100%;
+    box-sizing: border-box;
+    overflow-wrap: break-word;
+    word-break: normal;
+  }
+}
 .nuestro-trabajo {
   padding: 2rem 2rem;
   text-align: center;
@@ -318,6 +351,32 @@ header .navbar-toggler .navbar-toggler-icon {
   background-color: #fab416;
 }
 
+@media (max-width: 992px) {
+  .nuestro-trabajo {
+    display: flex !important;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 0 1rem;
+    margin: 2rem;
+    box-sizing: border-box;
+    width: auto;
+  }
+  .nuestro-trabajo-card {
+    display: flex !important;
+    flex-direction: column;
+    gap: 1.2rem;
+    padding: 0;
+    box-sizing: border-box;
+    width: 100%;
+    grid-template-columns: none !important;
+  }
+  .trabajo-card {
+    width: 100%;
+    box-sizing: border-box;
+    overflow-wrap: break-word;
+    word-break: normal;
+  }
+}
 .nuestra-identidad-title {
   padding: 2rem 2rem;
   text-align: center;
@@ -620,6 +679,22 @@ footer .logo-wpp {
   left: -1rem;
   top: 0;
   border-radius: 3px;
+}
+
+@media (max-width: 992px) {
+  .valores {
+    padding: 1rem;
+    gap: 2rem;
+    margin-top: 1rem;
+  }
+  .valores .valor h3 {
+    font-size: 1.4rem;
+    padding-left: 0.5rem;
+  }
+  .valores .valor h3::before {
+    width: 4px;
+    left: -0.5rem;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

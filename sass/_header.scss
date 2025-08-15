@@ -45,6 +45,7 @@ header{
             align-items: center;
             padding: 0;
             margin: 0 auto;
+            gap: 0;
             width: fit-content;
 
             a{
@@ -107,17 +108,44 @@ header{
 }
 
 @include m.mobile {
-.nav-menu {
-        .menu {
-        flex-direction: row;
-        justify-content: center;
-        gap: 0.3rem;
-        }
-    }
 
-    .navbar-toggler {
-        margin-top: 1rem;
-        margin-bottom: 3rem;
+    .nav-menu {
+        .collapse.navbar-collapse {
+            display: flex !important;          
+            justify-content: center !important; 
+            }
+
+        .menu {
+            display: flex !important;
+            flex-direction: column !important;  
+            align-items: center !important;
+            gap: 1rem !important;               
+            margin: 0;
+            padding: 0;
+            width: auto;
+            list-style: none;
+
+            .nav-item {
+                a.nav-link {
+                    display: block;
+                    padding: 0.5rem 1rem;
+                    border-radius: 0.5rem;
+                    text-align: center;
+                    font-size: 1rem;
+                    color: v.$color-texto;
+
+                    &:hover {
+                        background-color: v.$color-detalle;
+                        font-weight: 700;
+                    }
+
+                    &.active {
+                        background-color: v.$color-detalle;
+                        font-weight: 700;
+                    }
+                }
+            }
+        }
     }
 
     .current-page-title {
@@ -165,29 +193,5 @@ header{
         padding-top: 0;
     }
 
-    .nav-menu {
-        .menu {
-        display: flex;
-        flex-direction: column; // menú vertical
-        padding: 0;             // sacamos padding extra
-        margin: 0;              // sacamos margin extra
-        list-style: none;       // sin bullets
-        width: 100%;
-        
-            li {
-                margin: 0;           // ningún margen entre los li
-                padding: 0;          // ningún padding extra en li
 
-                a {
-                display: block;
-                width: 100%;
-                padding: 0.5rem 0.8rem; // controlás el espacio que ocupa el link
-                text-align: center;
-                font-size: 1rem;
-                color: v.$color-texto;
-                border-radius: 0.5rem;
-                }
-            }
-        }
-    }
 }
